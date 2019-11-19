@@ -9,5 +9,10 @@ def gaia_passband_to_b_minus_v(gbp_minus_grp):
     
     return result[0]
 
+# In K
 def teff(b_minus_v):
     return 4600 * ((1 / (0.92 * b_minus_v + 1.7)) + (1 / (0.92 * b_minus_v + 0.62)))
+
+# In L_sun
+def luminosity(M):
+    return 10**(0.4 * (4.74 - M))
